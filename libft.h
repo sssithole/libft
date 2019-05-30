@@ -23,7 +23,7 @@ void			ft_bzero(void *s, size_t n);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);   
 int				ft_isalnum(int c);	
 int				ft_isdigit(int c);
-int				ft_islower(int c);
+int				ft_tolower(int c);
 int				ft_isprint(int c);
 int				ft_isascii(int c);
 
