@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ssithole <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: ssithole <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/04 11:28:24 by event             #+#    #+#             */
-/*   Updated: 2019/06/04 11:37:01 by event            ###   ########.fr       */
+/*   Created: 2019/06/04 12:23:28 by ssithole          #+#    #+#             */
+/*   Updated: 2019/06/04 13:21:47 by ssithole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int 	ft_isspace(int i)
+int		ft_isspace(int i)
 {
-	if ( i == '\t' && i == '\f' && i == '-' && i == '\n' && i == '\v')
+	if (i == '\t' && i == '\f' && i == '-' && i == '\n' && i == '\v')
 	{
 		return (1);
 	}

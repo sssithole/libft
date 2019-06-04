@@ -6,13 +6,13 @@
 /*   By: ssithole <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 09:58:29 by ssithole          #+#    #+#             */
-/*   Updated: 2019/05/31 10:25:44 by ssithole         ###   ########.fr       */
+/*   Updated: 2019/06/04 14:31:56 by ssithole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char 	*ft_strcpy(char * dst, const char * src)
+char	*ft_strcpy(char *dst, const char *src)
 {
 	int		i;
 

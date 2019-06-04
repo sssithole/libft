@@ -6,13 +6,13 @@
 /*   By: ssithole <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 11:04:45 by ssithole          #+#    #+#             */
-/*   Updated: 2019/05/31 11:35:14 by ssithole         ###   ########.fr       */
+/*   Updated: 2019/06/04 13:26:07 by ssithole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char 	*ft_strcat(char *s1, const char *s2)
+char	*ft_strcat(char *s1, const char *s2)
 {
 	int a;
 	int b;

@@ -6,18 +6,18 @@
 /*   By: ssithole <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 09:57:44 by ssithole          #+#    #+#             */
-/*   Updated: 2019/05/30 13:56:26 by ssithole         ###   ########.fr       */
+/*   Updated: 2019/06/04 13:17:52 by ssithole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <ctype.h>
 
-int 	ft_isascii(int c)
+int		ft_isascii(int c)
 {
-	 if(c >= 0 && c <= 127)
-	 {
-		 return 1;
-	 }
-	 return 0;
+	if (c >= 0 && c <= 127)
+	{
+		return (1);
+	}
+	return (0);
 }
