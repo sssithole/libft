@@ -6,7 +6,7 @@
 /*   By: ssithole <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 09:51:45 by ssithole          #+#    #+#             */
-/*   Updated: 2019/06/04 14:33:05 by ssithole         ###   ########.fr       */
+/*   Updated: 2019/05/31 09:57:50 by ssithole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strdup(const char *s1)
 	char	*copy;
 	int		i;
 
-	i = -1;
+	i =-1;
 	if (!s1 || !(copy = (char *)malloc(sizeof(char) * ft_strlen(s1) + 1)))
 	{
 		return (NULL);
