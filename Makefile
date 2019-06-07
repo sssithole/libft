@@ -6,7 +6,7 @@
 #    By: ssithole <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/30 08:56:02 by ssithole          #+#    #+#              #
-#    Updated: 2019/06/07 09:19:37 by ssithole         ###   ########.fr        #
+#    Updated: 2019/06/07 09:27:32 by ssithole         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,7 +69,8 @@ SRC = ft_atoi.c \
       ft_strsub.c \
       ft_strtrim.c \
       ft_strsplit.c \
-      ft_strndup.c      
+      ft_strndup.c \
+ 	  ft_isspace.c	  
 OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
