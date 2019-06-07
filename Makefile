@@ -6,7 +6,7 @@
 #    By: ssithole <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/30 08:56:02 by ssithole          #+#    #+#              #
-#    Updated: 2019/05/30 14:02:13 by ssithole         ###   ########.fr        #
+#    Updated: 2019/06/07 09:12:31 by ssithole         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -84,8 +84,8 @@ $(NAME): $(OBJ)
     @gcc $(FLAG) -c $< -o $@
 
 clean:
-    @rm -f $(OBJ)
-    @echo "OBJ deleted"
+	@rm -f $(OBJ)
+	@echo "OBJ deleted"
 
 fclean: clean
     @rm -f $(NAME)
