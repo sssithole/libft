@@ -6,7 +6,7 @@
 #    By: ssithole <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/30 08:56:02 by ssithole          #+#    #+#              #
-#    Updated: 2019/06/07 09:12:31 by ssithole         ###   ########.fr        #
+#    Updated: 2019/06/07 09:19:37 by ssithole         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRC = ft_atoi.c \
       ft_isdigit.c \
       ft_isprint.c \
       ft_itoa.c \
-     ft_islower.c \
+      ft_islower.c \
       ft_isspace.c \
       ft_isupper.c \
       ft_memccpy.c \
@@ -55,41 +55,41 @@ SRC = ft_atoi.c \
       ft_strstr.c \
       ft_tolower.c \
       ft_toupper.c \
-     ft_strncmp.c \
+      ft_strncmp.c \
       ft_memalloc.c \
       ft_striter.c \
       ft_strnew.c \
       ft_striteri.c \
-     ft_strmap.c \
+      ft_strmap.c \
       ft_strmapi.c \
-     ft_strequ.c \
-     ft_strnequ.c \
-     ft_memdel.c \
-     ft_strdel.c \
-     ft_strsub.c \
-     ft_strtrim.c \
+      ft_strequ.c \
+      ft_strnequ.c \
+      ft_memdel.c \
+      ft_strdel.c \
+      ft_strsub.c \
+      ft_strtrim.c \
       ft_strsplit.c \
-     ft_strndup.c      
+      ft_strndup.c      
 OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-    @ar rc $(NAME) $(OBJ)
-    @echo "$(NAME) created"
-    @ranlib $(NAME)
-    @echo "$(NAME) indexed"
+	@ar rc $(NAME) $(OBJ)
+	@echo "$(NAME) created"
+	@ranlib $(NAME)
+	@echo "$(NAME) indexed"
 
 %.o: %.c
-    @gcc $(FLAG) -c $< -o $@
+	@gcc $(FLAG) -c $< -o $@
 
 clean:
 	@rm -f $(OBJ)
 	@echo "OBJ deleted"
 
 fclean: clean
-    @rm -f $(NAME)
-    @echo "$(NAME) deleted"
+	@rm -f $(NAME)
+	@echo "$(NAME) deleted"
 
 re: fclean all
 N:
