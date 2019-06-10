@@ -6,7 +6,7 @@
 /*   By: ssithole <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 09:25:04 by ssithole          #+#    #+#             */
-/*   Updated: 2019/06/07 09:37:58 by ssithole         ###   ########.fr       */
+/*   Updated: 2019/06/10 12:27:56 by ssithole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,6 @@ int        ft_isdigit(int c);
 int        ft_isalnum(int c);
 int        ft_isascii(int c);
 int        ft_isprint(int c);
-int		   ft_isspace(int i);
 int        ft_toupper(int c);
 int        ft_tolower(int c);
 
