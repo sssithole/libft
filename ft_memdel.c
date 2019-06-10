@@ -6,7 +6,7 @@
 /*   By: ssithole <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 09:13:39 by ssithole          #+#    #+#             */
-/*   Updated: 2019/06/06 09:50:30 by ssithole         ###   ########.fr       */
+/*   Updated: 2019/06/10 11:35:13 by ssithole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,4 @@ void	ft_memdel(void **ap)
 	{
 		free(ap);
 	}
-
-}
-
-#include <stdio.h>
-
-int main()
-{
-	char s[] = "hello word";
-
-	ft_memdel(&s);
-
-	return 0;
 }
