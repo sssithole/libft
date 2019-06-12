@@ -6,13 +6,13 @@
 /*   By: ssithole <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 10:00:03 by ssithole          #+#    #+#             */
-/*   Updated: 2019/05/30 14:51:27 by ssithole         ###   ########.fr       */
+/*   Updated: 2019/06/12 14:10:57 by ssithole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_memset(void *b, int c, size_t len)
+void	*ft_memset(void *b, int c, size_t len)
 {
 	char	*p;
 	int		i;
