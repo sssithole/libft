@@ -6,7 +6,7 @@
 /*   By: ssithole <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/04 16:11:33 by ssithole          #+#    #+#             */
-/*   Updated: 2019/06/04 16:11:42 by ssithole         ###   ########.fr       */
+/*   Updated: 2019/06/14 09:42:34 by ssithole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,15 @@
 char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
 	int	i;
-	int 	p;
+	int p;
 
 	i = 0;
 	p = 0;
-	while (s1[i])
+	while (s1[i] != '\0')
 	{
 		i++;
 	}
-	while (s2[i] && p < n)
+	while (s2[i] != '\0' && p < n)
 	{
 		s1[i + p] = s2[i];
 		i++;
