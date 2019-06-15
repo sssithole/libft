@@ -6,7 +6,7 @@
 /*   By: ssithole <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 10:04:26 by ssithole          #+#    #+#             */
-/*   Updated: 2019/05/30 14:30:43 by ssithole         ###   ########.fr       */
+/*   Updated: 2019/06/14 14:20:57 by ssithole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,17 @@
 
 void		*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	int		i;
+	size_t		i;
 	char	*pdst;
 	char	*psrc;
 
 	pdst = (char *)dst;
 	psrc = (char *)src;
 	i = 0;
-	while (n--)
+	while (i < n)
 	{
-		dst++;
-		src++;
+		pdst[i] = psrc[i];
+		i++;
 	}
+	return (dst);
 }

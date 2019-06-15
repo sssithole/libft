@@ -1,24 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_islower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssithole <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/06 08:43:49 by ssithole          #+#    #+#             */
-/*   Updated: 2019/06/15 11:51:28 by ssithole         ###   ########.fr       */
+/*   Created: 2019/06/14 10:47:15 by ssithole          #+#    #+#             */
+/*   Updated: 2019/06/14 10:48:13 by ssithole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_memalloc(size_t size)
+int	ft_islower(int arg)
 {
-	void	*m;
-
-	m = malloc(size);
-	if (m == NULL)
-		return (NULL);
-	ft_bzero(m, size);
-	return (m);
+	if (arg >= 'a' && arg <= 'z')
+		return (1);
+	else
+		return (0);
 }

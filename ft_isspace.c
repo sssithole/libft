@@ -6,17 +6,22 @@
 /*   By: ssithole <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/04 12:23:28 by ssithole          #+#    #+#             */
-/*   Updated: 2019/06/04 13:21:47 by ssithole         ###   ########.fr       */
+/*   Updated: 2019/06/14 13:31:48 by ssithole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isspace(int i)
+int	ft_isspace(int c)
 {
-	if (i == '\t' && i == '\f' && i == '-' && i == '\n' && i == '\v')
+	char	*space;
+
+	space = "\t\n\v\f\r ";
+	while (*space)
 	{
-		return (1);
+		if (c == *space)
+			return (1);
+		space++;
 	}
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: ssithole <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 12:31:47 by ssithole          #+#    #+#             */
-/*   Updated: 2019/06/10 12:24:51 by ssithole         ###   ########.fr       */
+/*   Updated: 2019/06/15 11:13:41 by ssithole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,24 @@
 
 int		ft_atoi(const char *str)
 {
-	int		i;
-	int		nbr;
-	int		sign;
+	unsigned long int	x;
+	int					sign;
+	char				*nstr;
 
-	i = 0;
-	nbr = 0;
 	sign = 1;
-	if (str == '\0')
-		return (0);
-	while ((str[i] == '\n') || (str[i] == '\t') || (str[i] == '\v') ||
-			(str[i] == '-') || (str[i] == '\f') || (str[i] == '\r'))
-		i++;
-	if (str[i] == '-' || str[i] == '+')
-		if (str[i++] == '-')
+	x = 0;
+	nstr = (char*)str;
+	while (*nstr == ' ' || *nstr == '\n' || *nstr == '\t' || *nstr == '\r' || \
+			*nstr == '\v' || *nstr == '\f')
+		nstr++;
+	if (*nstr == '-' || *nstr == '+')
+	{
+		if (*nstr++ == '-')
 			sign = -1;
-	while (str[i] >= '0' && str[i] <= '9')
-		nbr = (nbr * 10) + (str[i++] - '0');
-	return (nbr * sign);
+	}
+	while (ft_isdigit(*nstr))
+		x = x * 10 + (*nstr++ - '0');
+	if (x > 9223372036854775807)
+		return (sign > 0 ? -1 : 0);
+	return (sign * x);
 }

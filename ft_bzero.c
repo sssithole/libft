@@ -6,7 +6,7 @@
 /*   By: ssithole <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 10:20:44 by ssithole          #+#    #+#             */
-/*   Updated: 2019/05/30 14:37:20 by ssithole         ###   ########.fr       */
+/*   Updated: 2019/06/15 11:30:03 by ssithole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,5 @@
 
 void		ft_bzero(void *s, size_t n)
 {
-	char	*p;
-	int		i;
-
-	p = (char *)s;
-	i = 0;
-	while (n > 0)
-	{
-		p[i] = 0;
-		i++;
-	}
+	ft_memset(s, 0, n);
 }

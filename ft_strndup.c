@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssithole <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/06 08:43:49 by ssithole          #+#    #+#             */
-/*   Updated: 2019/06/15 11:51:28 by ssithole         ###   ########.fr       */
+/*   Created: 2019/06/14 13:25:23 by ssithole          #+#    #+#             */
+/*   Updated: 2019/06/14 13:29:44 by ssithole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memalloc(size_t size)
+char	*ft_strndup(const char *str, size_t n)
 {
-	void	*m;
+	char	*s;
 
-	m = malloc(size);
-	if (m == NULL)
+	*s = (char *)malloc(sizeof(char) * n + 1);
+	if (s == NULL)
 		return (NULL);
-	ft_bzero(m, size);
-	return (m);
+	*s = ft_strncpy(s, str, n);
+	s[n] = '\0';
+	return (s);
 }

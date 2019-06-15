@@ -6,21 +6,13 @@
 /*   By: ssithole <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 09:51:05 by ssithole          #+#    #+#             */
-/*   Updated: 2019/06/06 10:40:02 by ssithole         ###   ########.fr       */
+/*   Updated: 2019/06/14 11:38:35 by ssithole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	ft_strnew(size_t size)
+char	*ft_strnew(size_t n)
 {
-	char *s;
-
-	s = malloc(size);
-	if (s == NULL)
-	{
-		return (NULL);
-	}
-	if (s == size)
-		return (s);
+	return ((char *)ft_memalloc(n + 1));
 }

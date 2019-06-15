@@ -1,24 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssithole <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/06 08:43:49 by ssithole          #+#    #+#             */
-/*   Updated: 2019/06/15 11:51:28 by ssithole         ###   ########.fr       */
+/*   Created: 2019/06/14 12:31:19 by ssithole          #+#    #+#             */
+/*   Updated: 2019/06/14 13:16:36 by ssithole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memalloc(size_t size)
+char		**ft_strsplit(char const *s, char d)
 {
-	void	*m;
+	size_t	i;
+	size_t	j;
+	size_t	k;
+	char	**res;
 
-	m = malloc(size);
-	if (m == NULL)
+	i = 0;
+	j = 0;
+	if (s == NULL)
 		return (NULL);
-	ft_bzero(m, size);
-	return (m);
+	res = (char **)malloc(sizeof(char *) * (count_words((char *)s, d) + 1));
+	if (res == NULL)
+		return (NULL);
+	while (s[i])
+	{
+		while (s[i] == d)
+			i++;
+		k = i;
+		while (s[i] && s[i] != d)
+			i++;
+		if (i > k)
+			res[j++] = ft_strsub(s, k, i - k);
+	}
+	res[j] = NULL;
+	return (res);
 }

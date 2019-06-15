@@ -1,24 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssithole <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/06 08:43:49 by ssithole          #+#    #+#             */
-/*   Updated: 2019/06/15 11:51:28 by ssithole         ###   ########.fr       */
+/*   Created: 2019/06/13 15:12:14 by ssithole          #+#    #+#             */
+/*   Updated: 2019/06/13 15:20:42 by ssithole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memalloc(size_t size)
+void	*ft_memchr(const void *str, int c, size_t n)
 {
-	void	*m;
+	char	*s;
+	size_t	i;
 
-	m = malloc(size);
-	if (m == NULL)
-		return (NULL);
-	ft_bzero(m, size);
-	return (m);
+	i = 0;
+	s = (char *)str;
+	while (i < n)
+	{
+		if ((unsigned char)s[i] == (unsigned char)c)
+			return ((char *)str + i);
+		i++;
+	}
+	return (NULL);
 }
