@@ -6,11 +6,31 @@
 /*   By: ssithole <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/14 12:31:19 by ssithole          #+#    #+#             */
-/*   Updated: 2019/06/14 13:16:36 by ssithole         ###   ########.fr       */
+/*   Updated: 2019/06/17 16:13:26 by ssithole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "libft.h"
+
+static	int	count_words(char *s, char d)
+{
+	int		i;
+	int		count;
+
+	i = 0;
+	count = 0;
+	while (s[i])
+	{
+		while (s[i] == d && s[i] != '\0')
+			i++;
+		if (s[i] != d && s[i] != '\0')
+			count++;
+		while (s[i] != d && s[i] != '\0')
+			i++;
+	}
+	return (count);
+}
 
 char		**ft_strsplit(char const *s, char d)
 {
